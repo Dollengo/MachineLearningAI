@@ -12,7 +12,7 @@ def activation(sum):
     else:
         return 0
 
-print(f"Entrada: {input}, Desejado: {output_desire}")
+print(f"Input: {input}, Desired: {output_desire}")
 error = math.inf
 
 iteration = 0
@@ -22,14 +22,14 @@ bias_weight = 0.5
 
 while not error == 0:
     iteration += 1
-    print("######## Iteração: ", iteration)
-    print("Peso: ", input_weight)
+    print("######## Iteration: ", iteration)
+    print("Weight: ", input_weight)
 
     sum = (input * input_weight) + (bias * bias_weight)
 
     output = activation(sum)
 
-    print(f"Saída: {output}")
+    print(f"Output: {output}")
 
     error = output_desire - output
 
@@ -39,4 +39,4 @@ while not error == 0:
         input_weight = input_weight + (learning_rate * input * error)
         bias_weight = bias_weight + (learning_rate * bias * error)
 
-print("A rede aprendeu")
+print("Sucess!")
